@@ -34,3 +34,6 @@ Use fallback to delegate call pwn to change the owner of delegation. Delegatecal
 
 ### 07 Force
 Use self destruct to force funds into contract, note that selfdestruct is now deprecated.
+
+### 08 Vault
+There is no private on chain data!
