@@ -1,11 +1,11 @@
 // SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
+pragma solidity ^0.6.0;
 
 import "forge-std/Test.sol";
-import "../src/00_REPLACE.sol";
+import "../src/02_Fallout.sol";
 
 contract REPLACETest is Test {
-    REPLACE replace;
+    Fallout _fallout;
     address deployer;
     address attacker;
 
@@ -13,7 +13,7 @@ contract REPLACETest is Test {
         deployer = address(this);
         attacker = vm.addr(1);
 
-        replace = new REPLACE();
+        _fallout = new Fallout();
 
     }
 
@@ -21,6 +21,6 @@ contract REPLACETest is Test {
         vm.prank(attacker);
 
 
-        assertTrue(replace.cleared(), "Level is not cleared!");
+        assertEq(_fallout.owner, attacker, "Atacker is not owner!");
     }
 }

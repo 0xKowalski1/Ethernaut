@@ -11,7 +11,7 @@ contract HelloEthernautTest is Test {
 
     function setUp() public {
         deployer = address(this);
-        attacker = address(1);
+        attacker = vm.addr(1);
 
         helloEthernaut = new HelloEthernaut("SecretPassword");
 

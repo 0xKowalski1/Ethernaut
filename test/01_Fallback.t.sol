@@ -11,7 +11,7 @@ contract FallbackTest is Test {
 
     function setUp() public {
         deployer = address(this);
-        attacker = address(address(uint160(uint256(keccak256(abi.encodePacked("Attacker"))))));
+        attacker = vm.addr(1);
 
         vm.deal(attacker, 2 wei); // Fund attacker
 
