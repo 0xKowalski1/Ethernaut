@@ -12,4 +12,9 @@ forge script script/Deployer.s.sol --broadcast --rpc-url http://localhost:8545/ 
 ## Solutions
 
 ### 00 Hello Ethernaut
+Call each method, then authenticate with password
+
+### 01 Fallback
+
+
 
