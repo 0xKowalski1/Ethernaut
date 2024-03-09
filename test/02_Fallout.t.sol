@@ -4,7 +4,7 @@ pragma solidity ^0.8.0;
 import "forge-std/Test.sol";
 import "../src/02_Fallout.sol";
 
-contract REPLACETest is Test {
+contract FalloutTest is Test {
     Fallout _fallout;
     address deployer;
     address attacker;
@@ -18,8 +18,9 @@ contract REPLACETest is Test {
     }
 
     function testSolution() public {
-        vm.prank(attacker);
+        vm.startPrank(attacker);
 
+        _fallout.Fal1out();    
 
         assertEq(_fallout.owner(), attacker, "Atacker is not owner!");
     }

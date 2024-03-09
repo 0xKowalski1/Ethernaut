@@ -5,7 +5,7 @@ import "forge-std/Test.sol";
 import "../src/00_HelloEthernaut.sol";
 
 contract HelloEthernautTest is Test {
-    HelloEthernaut helloEthernaut;
+    HelloEthernaut _helloEthernaut;
     address deployer;
     address attacker;
 
@@ -13,25 +13,25 @@ contract HelloEthernautTest is Test {
         deployer = address(this);
         attacker = vm.addr(1);
 
-        helloEthernaut = new HelloEthernaut("SecretPassword");
+        _helloEthernaut = new HelloEthernaut("SecretPassword");
 
     }
 
     function testSolution() public {
-        vm.prank(attacker);
+        vm.startPrank(attacker);
 
-        console.log(helloEthernaut.info());
-        console.log(helloEthernaut.info1());
-        console.log(helloEthernaut.info2("hello"));
-        console.log(helloEthernaut.infoNum());
-        console.log(helloEthernaut.info42());
-        console.log(helloEthernaut.theMethodName());
-        console.log(helloEthernaut.method7123949());
+        console.log(_helloEthernaut.info());
+        console.log(_helloEthernaut.info1());
+        console.log(_helloEthernaut.info2("hello"));
+        console.log(_helloEthernaut.infoNum());
+        console.log(_helloEthernaut.info42());
+        console.log(_helloEthernaut.theMethodName());
+        console.log(_helloEthernaut.method7123949());
 
-        string memory password = helloEthernaut.password();
+        string memory password = _helloEthernaut.password();
 
-        helloEthernaut.authenticate(password);
+        _helloEthernaut.authenticate(password);
 
-        assertTrue(helloEthernaut.getCleared(), "Level is not cleared!");
+        assertTrue(_helloEthernaut.getCleared(), "Level is not cleared!");
     }
 }
