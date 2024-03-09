@@ -28,3 +28,6 @@ tx.origin != msg.sender when msg.sender is a contract called by tx.origin
 
 ### 05 Token
 Under/Overflow's now revert, added unchecked block to mimic old functionality. Why is another account required?
+
+### 06 Delegation
+Use fallback to delegate call pwn to change the owner of delegation. Delegatecall allows contracts to use the logic of another contract with their own state.
