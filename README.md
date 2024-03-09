@@ -31,3 +31,6 @@ Under/Overflow's now revert, added unchecked block to mimic old functionality. W
 
 ### 06 Delegation
 Use fallback to delegate call pwn to change the owner of delegation. Delegatecall allows contracts to use the logic of another contract with their own state.
+
+### 07 Force
+Use self destruct to force funds into contract, note that selfdestruct is now deprecated.
