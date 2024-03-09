@@ -10,8 +10,8 @@ contract Deployer is Script {
         vm.startBroadcast();
 
         // 00
-        HelloEthernaut helloEthernaut = new HelloEthernaut();
-        console.log("Deployed 00_HelloEthernaut at address:", address(HelloEthernaut));
+        HelloEthernaut helloEthernaut = new HelloEthernaut("SecretPassword");
+        console.log("Deployed 00_HelloEthernaut at address:", address(helloEthernaut));
 
         //01
 
