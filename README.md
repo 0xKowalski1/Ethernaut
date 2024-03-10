@@ -58,5 +58,4 @@ No priv on chain data, slightly harder to access
 Use approve and transferFrom to bypass transfer lock
 
 ### 16 Preservation
-
-
+how storage works with delegate calls
