@@ -28,7 +28,6 @@ contract KingTest is Test {
 
         vm.prank(deployer);
         _king = new King{value:1 ether}();
-
     }
 
     function testSolution() public {
