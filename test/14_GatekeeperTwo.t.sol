@@ -21,6 +21,6 @@ contract GatekeeperTwoTest is Test {
         vm.startPrank(attacker);
 
 
-        assertTrue(_gatekeeperTwo.cleared(), "Level is not cleared!");
+        assertEq(_gatekeeperTwo.entrant(), attacker, "Attacker is not entrant!");
     }
 }

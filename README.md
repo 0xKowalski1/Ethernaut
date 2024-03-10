@@ -50,6 +50,13 @@ Have to bare in mind how state changes accross multiple calls
 ### 12 Privacy
 No priv on chain data, slightly harder to access
 
-### 13 Gatekeeper one
+### 13 Gatekeeper One
+
+### 14 Gatekeeper Two
+
+### 15 NaughtCoin
+Use approve and transferFrom to bypass transfer lock
+
+
 
 
