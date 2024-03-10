@@ -37,3 +37,6 @@ Use self destruct to force funds into contract, note that selfdestruct is now de
 
 ### 08 Vault
 There is no private on chain data!
+
+### 09 King
+Malicious user can revert on receive and cause contract to not be able to transfer funds to user. Freezing the contract
