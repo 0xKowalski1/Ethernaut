@@ -46,3 +46,6 @@ Classic reentrancy
 
 ### 11 Elevator
 Have to bare in mind how state changes accross multiple calls
+
+### 12 Privacy
+No priv on chain data, slightly harder to access
