@@ -59,3 +59,5 @@ Use approve and transferFrom to bypass transfer lock
 
 ### 16 Preservation
 how storage works with delegate calls
+
+### 17 Recovery
