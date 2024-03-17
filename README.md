@@ -69,3 +69,6 @@ Compute bytecode to deploy contract directly from bytecode
 
 ### 20 Denial
 Use all the gas
+
+### 21 Shop
+isSold is changed between price checks, so use that as a conditional for two different prices
