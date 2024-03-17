@@ -61,3 +61,6 @@ Use approve and transferFrom to bypass transfer lock
 how storage works with delegate calls
 
 ### 17 Recovery
+
+### 18 Magic Number
+Compute bytecode to deploy contract directly from bytecode
