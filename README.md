@@ -64,3 +64,8 @@ how storage works with delegate calls
 
 ### 18 Magic Number
 Compute bytecode to deploy contract directly from bytecode
+
+### 19 Alien Codex
+
+### 20 Denial
+Use all the gas
